@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form name="employee" method="GET" onsubmit="return false">
+
+        <table>
+            <caption>Employee Details</caption>
+            <tr>
+                <td><label for="fname">First Name</label></td>
+                <td><input type="text" name="fname" id="fname" required></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name</label></td>
+                <td><input type="text" name="lname" id="lname" required></td>
+            </tr>
+            <tr>
+                <td><label for="code">Employee Code</label></td>
+                <td><input type="text" name="code" id="code" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth</label></td>
+                <td><input type="date" name="dob" id="dob" required></td>
+            </tr>
+            <tr>
+                <td><label for="designation">Desigination</label></td>
+                <td>
+
+                    <select name="designation">
+                        <option value="select">Select</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Web Developer">Web Developer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td><input type="submit" value="Save" onclick="AddRow()" id="formSubmit"></td>
+            </tr>
+        </table>
+    </form>
+    <table id="formDetails">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Employee Code</th>
+            <th>Date Of Birth</th>
+            <th>Desigination</th>
+        </tr>
+    </table>
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>
