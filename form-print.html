@@ -5,59 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Form Print</title>
 
 </head>
 
 <body>
-    <form name="employee" method="GET" onsubmit="return false">
 
-        <table>
-            <caption>Employee Details</caption>
-            <tr>
-                <td><label for="fname">First Name</label></td>
-                <td><input type="text" name="fname" id="fname" required></td>
-            </tr>
-            <tr>
-                <td><label for="lname">Last Name</label></td>
-                <td><input type="text" name="lname" id="lname" required></td>
-            </tr>
-            <tr>
-                <td><label for="code">Employee Code</label></td>
-                <td><input type="text" name="code" id="code" required></td>
-            </tr>
-            <tr>
-                <td><label for="dob">Date of Birth</label></td>
-                <td><input type="date" name="dob" id="dob" required></td>
-            </tr>
-            <tr>
-                <td><label for="designation">Desigination</label></td>
-                <td>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input class="form-control" placeholder="Enter first name" type="text" name="fname" id="fname">
 
-                    <select name="designation">
-                        <option value="select">Select</option>
-                        <option value="Software Engineer">Software Engineer</option>
-                        <option value="Web Developer">Web Developer</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input class="form-control" placeholder="Enter last name" type="text" name="lname" id="lname">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Employee Code</label>
+                        <input class="form-control" placeholder="Enter employee code" type="text" name="code" id="code">
+                    </div>
+                    <div class="form-group">
+                        <label for="fname">Date of Birth</label>
+                        <input class="form-control" placeholder="Enter date of birth" type="date" name="dob" id="dob">
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <select class="form-control" name="designation">
+                            <option value="0">select</option>
+                            <option value="1">Software Engineer</option>
+                            <option value="2">Web Developer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" id="btn-save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-                </td>
-                <td><input type="submit" value="Save" onclick="AddRow()" id="formSubmit"></td>
-            </tr>
-        </table>
-    </form>
-    <table id="formDetails">
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Employee Code</th>
-            <th>Date Of Birth</th>
-            <th>Desigination</th>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Employee Code</th>
+                                <th>Date Of Birth</th>
+                                <th>Desigination</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <script defer src="js/main.js"></script>
 </body>
 
