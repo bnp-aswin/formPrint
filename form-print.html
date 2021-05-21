@@ -16,9 +16,10 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <form>
+        <div class="row justify-content-md-center">
+            <div class="col-8">
+                <h1 class="center">Employee Details</h1>
+                <form id=employeeDetails method="POST">
                     <div class="form-group">
                         <label for="fname">First Name</label>
                         <input class="form-control" placeholder="Enter first name" type="text" name="fname" id="fname">
@@ -38,9 +39,9 @@
                     </div>
                     <div class="form-group">
                         <label for="designation">Designation</label>
-                        <select class="form-control" name="designation">
+                        <select class="form-control" name="designation" id="designation">
                             <option value="0">select</option>
-                            <option value="1">Software Engineer</option>
+                            <option value="Software Engineer">Software Engineer</option>
                             <option value="2">Web Developer</option>
                         </select>
                     </div>
@@ -53,10 +54,10 @@
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col">
+        <div class="row justify-content-md-center">
+            <div class="col-8">
                 <div class="table-responsive">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" id="prinTable">
                         <thead>
                             <tr>
                                 <th>First Name</th>
