@@ -18,10 +18,11 @@ function writeData(record) {
     newRow.insertCell(2).innerHTML = record.employeeCode;
     newRow.insertCell(3).innerHTML = record.dateOfBirth;
     newRow.insertCell(4).innerHTML = record.designation;
-    newRow.insertCell(5).innerHTML = '<a onClick="">Edit</a>'
-    newRow.insertCell(6).innerHTML = '<a onClick="">Delete</a>'
+    newRow.insertCell(5).innerHTML = '<a onClick=""><i class="bi bi-pencil-fill"></i></a>'
+    newRow.insertCell(6).innerHTML = '<a onClick=""><i class="bi bi-trash-fill"></i></a>'
 
 }
+
 document.getElementById('btn-save').addEventListener('click', function (event) {
     event.preventDefault();
     var formDetails = readData();
