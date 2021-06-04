@@ -19,10 +19,16 @@ function writeData(record) {
     newRow.insertCell(3).innerHTML = record.dateOfBirth;
     newRow.insertCell(4).innerHTML = record.designation;
     newRow.insertCell(5).innerHTML = '<a onClick=""><i class="bi bi-pencil-fill"></i></a>'
-    newRow.insertCell(6).innerHTML = '<a onClick=""><i class="bi bi-trash-fill"></i></a>'
+    newRow.insertCell(6).innerHTML = '<a onClick="deleteData()"><i class="bi bi-trash-fill"></i></a>'
 
 }
+function deleteData(record){
+    if(confirm('R U sure that you want to delete this row')){
+              selectedRow=record.parentElement.parentElement;
+        document.getElementById('employee-table').deleteRow(selectedRow.rowIndex);
 
+    }
+}
 document.getElementById('btn-save').addEventListener('click', function (event) {
     event.preventDefault();
     var formDetails = readData();
