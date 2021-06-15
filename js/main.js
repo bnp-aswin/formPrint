@@ -21,6 +21,14 @@ let employeeDetsils=new Vue({
                     this.dob = '';
                     this.designation = '';
         },
+        rowSelect(index,fname,lname,id,dob,designation){
+this.selectRow = index;
+                    this.firstName = fname;
+                    this.lastName = lname;
+                    this.employeeCode = id;
+                    this.dob = dob;
+                    this.designation=designation;
+        },
         preventSubmit(e){
  e.preventDefault();
         }
