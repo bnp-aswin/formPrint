@@ -89,7 +89,14 @@
                             </tr>
                         </thead>
                         <tbody>
-
+                            <tr v-for="(employee,index) in employees"
+                                @click="rowSelect(index,employee.fname,employee.lname,employee.id,employee.dob,employee.designation)">
+                                <td v-text='employee.fname'></td>
+                                <td v-text='employee.lname'></td>
+                                <td v-text='employee.id'></td>
+                                <td v-text='employee.dob'></td>
+                                <td v-text='employee.designation'></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
