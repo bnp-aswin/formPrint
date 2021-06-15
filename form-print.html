@@ -14,23 +14,23 @@
 <body>
 
     <div class="container">
-        <div class="row">
+        <div class="row" id="root">
             <div class="col-md-5 col-12">
                 <h1 class="text-center">Employee Form</h1>
-                <form id="employee-form" method="POST">
+                <form id="employee-form" method="POST" @submit.prevent="preventSubmit">
                     <div class="form-row">
                         <div class="col-sm-6 col-12">
                             <div class="form-group">
                                 <label for="first-name">First Name</label>
                                 <input class="form-control" placeholder="Enter first name" type="text" name="first-name"
-                                    id="first-name">
+                                    v-model="firstName">
                             </div>
                         </div>
                         <div class="col-sm-6 col-12">
                             <div class="form-group">
                                 <label for="last-name">Last Name</label>
                                 <input class="form-control" placeholder="Enter last name" type="text" name="last-name"
-                                    id="last-name">
+                                    v-model="lastName">
                             </div>
                         </div>
                     </div>
@@ -39,13 +39,13 @@
                             <div class="form-group">
                                 <label for="employee-code">Employee Code</label>
                                 <input class="form-control" placeholder="Enter employee code" type="text"
-                                    name="employee-code" id="employee-code">
+                                    name="employee-code" v-model="employeeCode">
                             </div>
                         </div>
                         <div class="col-sm-6 col-12">
                             <div class="form-group">
                                 <label for="dob">Date of Birth</label>
-                                <input class="form-control" type="date" name="dob" id="dob">
+                                <input class="form-control" type="date" name="dob" v-model="dob">
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="designation">Designation</label>
-                                <select class="form-control" name="designation" id="designation">
+                                <select class="form-control" name="designation" v-model="designation">
                                     <option value="">select</option>
                                     <option value="Software Engineer">Software Engineer</option>
                                     <option value="Web Developer">Web Developer</option>
@@ -65,11 +65,13 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
-                                <input type="submit" value="Add Employee" class="btn btn-primary" id="btn-save">
+                                <input type="submit" value="Add Employee" @click="addEmployee" class="btn btn-primary"
+                                    id="btn-save">
                             </div>
                         </div>
                     </div>
                 </form>
+
             </div>
             <div class="col-md-7 col-12">
                 <h1 class="text-center">Empoyee Details</h1>
@@ -94,7 +96,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <script defer src="js/main.js"></script>
 </body>
